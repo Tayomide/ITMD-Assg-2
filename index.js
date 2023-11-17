@@ -31,7 +31,7 @@ app.use("/upload", upload)
 
 mongoose.connect(uri)
 .then(() => {
-  app.listen(PORT, () => {
+  app.listen(process.env.PORT || PORT, () => {
     console.log("Server started")
     console.log(`Server located at http://localhost:${PORT}`)
   })
